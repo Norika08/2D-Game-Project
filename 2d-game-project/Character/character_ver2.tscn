@@ -416,6 +416,9 @@ _data = {
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_sk4d2")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2bpo5")
 animation = &"finish_fishing_left"
