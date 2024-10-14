@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8v08klsx363i"]
+
+[ext_resource type="PackedScene" uid="uid://cykn3iydpjgfj" path="res://Player Movement/Player-fishing.tscn" id="1_n22oe"]
+
+[node name="Game Scene" type="Node2D"]
+position = Vector2(87, 67)
+
+[node name="Player-fishing" parent="." instance=ExtResource("1_n22oe")]
+position = Vector2(233, 133)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(232, 134)
+zoom = Vector2(4, 4)

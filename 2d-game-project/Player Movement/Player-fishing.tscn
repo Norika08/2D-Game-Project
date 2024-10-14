@@ -1,0 +1,150 @@
+[gd_scene load_steps=22 format=3 uid="uid://cykn3iydpjgfj"]
+
+[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="1_4m5wa"]
+[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_iddip"]
+[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="2_exd8m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6ua8"]
+atlas = ExtResource("1_4m5wa")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ks6"]
+atlas = ExtResource("1_4m5wa")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikmh4"]
+atlas = ExtResource("1_4m5wa")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yuuf"]
+atlas = ExtResource("1_4m5wa")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dbgi"]
+atlas = ExtResource("1_4m5wa")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwbtf"]
+atlas = ExtResource("1_4m5wa")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgku3"]
+atlas = ExtResource("1_iddip")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h5xs"]
+atlas = ExtResource("1_iddip")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qqhm"]
+atlas = ExtResource("1_iddip")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rr5w"]
+atlas = ExtResource("1_iddip")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wpqu"]
+atlas = ExtResource("1_iddip")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b311j"]
+atlas = ExtResource("1_iddip")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmxot"]
+atlas = ExtResource("2_exd8m")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_800o1"]
+atlas = ExtResource("2_exd8m")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eld1"]
+atlas = ExtResource("2_exd8m")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulvve"]
+atlas = ExtResource("2_exd8m")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jki8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6ua8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ks6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikmh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yuuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dbgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwbtf")
+}],
+"loop": true,
+"name": &"Finish Fishing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgku3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h5xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qqhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rr5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wpqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b311j")
+}],
+"loop": true,
+"name": &"Start Fishing",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmxot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_800o1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2eld1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulvve")
+}],
+"loop": true,
+"name": &"idling",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3iv6"]
+radius = 4.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jki8k")
+animation = &"idling"
+autoplay = "idling"
+frame_progress = 0.965555
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_w3iv6")
