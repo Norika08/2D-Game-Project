@@ -1,18 +1,23 @@
 extends CharacterBody2D
 
 
-const SPEED = 50.0
+const SPEED = 1.0
 const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right"):
 		velocity.x += SPEED
-	if Input.is_action_just_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left"):
 		velocity.x -= SPEED
-	if Input.is_action_just_pressed("ui_up"):
-		velocity.y += SPEED
-	if Input.is_action_just_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_up"):
 		velocity.y -= SPEED
+	elif Input.is_action_pressed("ui_down"):
+		velocity.y += SPEED
+	else:
+		velocity.x = 0 
+		velocity.y = 0
 
 	move_and_slide()
+	
+	
