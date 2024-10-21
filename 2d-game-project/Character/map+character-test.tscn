@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://21rvaf7b2rdu"]
+[gd_scene load_steps=15 format=3 uid="uid://chb02qoakok5g"]
 
 [ext_resource type="PackedScene" uid="uid://b55f44xr6rpjx" path="res://world_map.tscn" id="1_pcmfg"]
-[ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="2_3tf7u"]
+[ext_resource type="PackedScene" uid="uid://bt6ujjo34dat6" path="res://character_ver2.tscn" id="2_3tf7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xydvv"]
 size = Vector2(194, 628.5)
@@ -41,10 +41,6 @@ size = Vector2(501, 551)
 
 [node name="map+character" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_3tf7u")]
-z_index = 1
-position = Vector2(798, 1027)
-
 [node name="WorldMap" parent="." instance=ExtResource("1_pcmfg")]
 position = Vector2(0, 98)
 
@@ -52,56 +48,60 @@ position = Vector2(0, 98)
 position = Vector2(0, -98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(91.5, 1170.25)
+position = Vector2(-394, 242.25)
 shape = SubResource("RectangleShape2D_xydvv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(261.5, 1659)
+position = Vector2(-224, 731)
 skew = -0.745256
 shape = SubResource("RectangleShape2D_103iq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(567.695, 1929.62)
+position = Vector2(82.1948, 1001.62)
 skew = -0.935497
 shape = SubResource("RectangleShape2D_ui4or")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(1298, 2156)
+position = Vector2(812.5, 1228)
 shape = SubResource("RectangleShape2D_aposy")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(1897, 1830)
+position = Vector2(1411.5, 902)
 shape = SubResource("RectangleShape2D_d1p4n")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(2087.5, 2065.75)
+position = Vector2(1602, 1137.75)
 shape = SubResource("RectangleShape2D_x4g7a")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(2670.5, 1697)
+position = Vector2(2185, 769)
 rotation = -0.191986
 skew = 0.0471239
 shape = SubResource("RectangleShape2D_dk83k")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(3639.22, 1120.53)
+position = Vector2(3153.72, 192.528)
 rotation = -1.14668
 skew = 0.0523599
 shape = SubResource("RectangleShape2D_17x1k")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(3320.46, 333.514)
+position = Vector2(2834.96, -594.486)
 rotation = 0.139626
 shape = SubResource("RectangleShape2D_i4p4f")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(2093.5, 77)
+position = Vector2(1608, -851)
 shape = SubResource("RectangleShape2D_hsp2e")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(596, 138)
+position = Vector2(110.5, -790)
 shape = SubResource("RectangleShape2D_c0k0b")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
-position = Vector2(91, 604)
+position = Vector2(-394.5, -324)
 shape = SubResource("RectangleShape2D_4lyg6")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_3tf7u")]
+z_index = 1
+position = Vector2(607, 665)
