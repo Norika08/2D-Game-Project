@@ -5,12 +5,8 @@ const SPEED = 100.0
 const DASH_SPEED = 200.0
 var move_velocity = Vector2(0, 0)
 var moving = false
-#var state1 = "idle"
-#var state2 = "fishing"
-#var state3 = "walking"
-#var is_start_fishing = false
+var is_fishing_start = false
 var is_fishing = false
-var is_fishing_idling = false
 var is_dashing = false
 #const JUMP_VELOCITY = -400.0
 
@@ -27,48 +23,47 @@ func _physics_process(delta: float) -> void:
 		#$AnimatedSprite2D.play("Fishing_" + get_fishing_direction())
 		#return 
 
-	if not is_fishing_idling:
-		if Input.is_action_pressed("down"):
-			velocity.y += SPEED
-			direction = Vector2(0, 1)
-			$AnimatedSprite2D.play("Walking_down")
-			#state="walking"
-			moving = true
-		elif Input.is_action_pressed("up"):
-			position.y -= 150*delta
-			direction = Vector2(0, -1)
-			$AnimatedSprite2D.play("Walking_up")
-			moving = true
-		elif Input.is_action_pressed("left"):
-			position.x -= 150*delta
-			direction = Vector2(-1, 0)
-			$AnimatedSprite2D.play("Walking_left")
-			moving = true
-		elif Input.is_action_pressed("right"):
-			position.x += 150*delta
-			direction = Vector2(1, 0)
-			$AnimatedSprite2D.play("Walking_right")
-			moving = true
-		elif Input.is_action_pressed("dash_down"):
-			position.y += 600*delta
-			direction = Vector2(0, 1)
-			$AnimatedSprite2D.play("Dash_down")
-			moving = true
-		elif Input.is_action_pressed("dash_up"):
-			position.y -= 600*delta
-			direction = Vector2(0, -1)
-			$AnimatedSprite2D.play("Dash_up")
-			moving = true
-		elif Input.is_action_pressed("dash_right"):
-			position.x += 600*delta
-			direction = Vector2(1, 0)
-			$AnimatedSprite2D.play("Dash_right")
-			moving = true
-		elif Input.is_action_pressed("dash_left"):
-			position.x -= 600*delta
-			direction = Vector2(-1, 0)
-			$AnimatedSprite2D.play("Dash_left")
-			moving = true
+	
+	if Input.is_action_pressed("down"):
+		velocity.y += SPEED
+		direction = Vector2(0, 1)
+		$AnimatedSprite2D.play("Walking_down")
+		moving = true
+	elif Input.is_action_pressed("up"):
+		position.y -= 150*delta
+		direction = Vector2(0, -1)
+		$AnimatedSprite2D.play("Walking_up")
+		moving = true
+	elif Input.is_action_pressed("left"):
+		position.x -= 150*delta
+		direction = Vector2(-1, 0)
+		$AnimatedSprite2D.play("Walking_left")
+		moving = true
+	elif Input.is_action_pressed("right"):
+		position.x += 150*delta
+		direction = Vector2(1, 0)
+		$AnimatedSprite2D.play("Walking_right")
+		moving = true
+	elif Input.is_action_pressed("dash_down"):
+		position.y += 600*delta
+		direction = Vector2(0, 1)
+		$AnimatedSprite2D.play("Dash_down")
+		moving = true
+	elif Input.is_action_pressed("dash_up"):
+		position.y -= 600*delta
+		direction = Vector2(0, -1)
+		$AnimatedSprite2D.play("Dash_up")
+		moving = true
+	elif Input.is_action_pressed("dash_right"):
+		position.x += 600*delta
+		direction = Vector2(1, 0)
+		$AnimatedSprite2D.play("Dash_right")
+		moving = true
+	elif Input.is_action_pressed("dash_left"):
+		position.x -= 600*delta
+		direction = Vector2(-1, 0)
+		$AnimatedSprite2D.play("Dash_left")
+		moving = true
 		
 	#
 	#if not moving:
@@ -95,30 +90,9 @@ func _physics_process(delta: float) -> void:
 
 #func start_fishing():
 	#is_fishing = false
-	#if Input.is_action_just_pressed("start_fishing"):
-		##is_fishing_start = true
-		#state = "fishing"
-		#
-	#match state :
-		#"start_fishing":
-			#if direction.is_equal_approx(Vector2(0, 1)):
-				#$AnimatedSprite2D.play("Start_fishing_down")
-			##is_fishing = true
-			#elif direction.is_equal_approx(Vector2(0, -1)):
-				#$AnimatedSprite2D.play("Start_fishing_up")
-			##is_fishing = true
-			#elif direction.is_equal_approx(Vector2(-1, 0)):
-				#$AnimatedSprite2D.play("Start_fishing_left")
-			##is_fishing = true
-			#elif direction.is_equal_approx(Vector2(1, 0)):
-				#$AnimatedSprite2D.play("Start_fishing_right")
-		#"walking":
-			#
-	#else state = id
-		
-		#is_fishing = false
 	if Input.is_action_just_pressed("start_fishing"):
-		#is_fishing_start = true
+		is_fishing_start = true
+		
 		if direction.is_equal_approx(Vector2(0, 1)):
 			$AnimatedSprite2D.play("Start_fishing_down")
 			#is_fishing = true
@@ -131,8 +105,8 @@ func _physics_process(delta: float) -> void:
 		elif direction.is_equal_approx(Vector2(1, 0)):
 			$AnimatedSprite2D.play("Start_fishing_right")
 			#is_fishing = true
-		is_fishing = true
-	#
+		#is_fishing = true
+	
 	#if Input.is_action_pressed("start_fishing"):
 		#direction = Vector2(0, 1)
 		#$AnimatedSprite2D.play("Start_fishing_front")
@@ -147,22 +121,17 @@ func _physics_process(delta: float) -> void:
 		#direction = Vector2(1, 0)
 		#$AnimatedSprite2D.play("Start_fishing_right")
 		#is_fishing = true
-		
-		
-		
 	if not moving:
-		if is_fishing:
-			pass
-		elif is_fishing_idling:
+		if is_fishing and is_fishing_start:
 			#fishing idle
 			if direction.is_equal_approx(Vector2(0, 1)):
 				$AnimatedSprite2D.play("idle_fishing_down")
 			elif direction.is_equal_approx(Vector2(0, -1)):
 				$AnimatedSprite2D.play("idle_fishing_up")
 			elif direction.is_equal_approx(Vector2(-1, 0)):
-				$AnimatedSprite2D.play("idle_fishing_right")
-			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("idle_fishing_left")
+			elif direction.is_equal_approx(Vector2(1, 0)):
+				$AnimatedSprite2D.play("idle_fishing_right")
 		else:
 			if direction.is_equal_approx(Vector2(0, 1)):
 				$AnimatedSprite2D.play("Idling_down")
@@ -172,32 +141,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("Idling_left")
 			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("Idling_right")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_animated_sprite_2d_animation_finished() -> void:
-	is_fishing = false
-	is_fishing_idling = true
-	$"fishing Timer".start()
-
-
-func _on_fishing_timer_timeout() -> void:
-	if Input.is_action_just_pressed("start_fishing"):
-		#is_fishing_start = true
-		if direction.is_equal_approx(Vector2(0, 1)):
-			$AnimatedSprite2D.play("finish_fishing_down")
-			#is_fishing = true
-		elif direction.is_equal_approx(Vector2(0, -1)):
-			$AnimatedSprite2D.play("finish_fishing_up")
-			#is_fishing = true
-		elif direction.is_equal_approx(Vector2(-1, 0)):
-			$AnimatedSprite2D.play("finish_fishing_left")
-			#is_fishing = true
-		elif direction.is_equal_approx(Vector2(1, 0)):
-			$AnimatedSprite2D.play("finish_fishing_right")
-			#is_fishing = true
-		is_fishing = false
-	#pass # Replace with function body.
