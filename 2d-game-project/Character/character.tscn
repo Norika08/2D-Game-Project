@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_1wydk"]
 [ext_resource type="Script" path="res://character.gd" id="1_sk4d2"]
-[ext_resource type="Texture2D" uid="uid://d4g1xjknuu54" path="res://basic/run.png" id="2_gc3jv"]
-[ext_resource type="Texture2D" uid="uid://dvgmxklgpexrt" path="res://basic/idle.png" id="2_kefqc"]
+[ext_resource type="Texture2D" uid="uid://d4g1xjknuu54" path="res://Assets/02. Base Character - Premium/basic/run.png" id="2_gc3jv"]
+[ext_resource type="Texture2D" uid="uid://dvgmxklgpexrt" path="res://Assets/02. Base Character - Premium/basic/idle.png" id="2_kefqc"]
 [ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="2_muaph"]
-[ext_resource type="Texture2D" uid="uid://bon0gx0a2vrag" path="res://basic/walk.png" id="3_ce3v8"]
+[ext_resource type="Texture2D" uid="uid://bon0gx0a2vrag" path="res://Assets/02. Base Character - Premium/basic/walk.png" id="3_ce3v8"]
 [ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="3_xav7d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jovrq"]
