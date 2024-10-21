@@ -1,15 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5wc0nmlapku5"]
+[gd_scene load_steps=3 format=3 uid="uid://c5wc0nmlapku5"]
 
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="1_4iihg"]
-[ext_resource type="PackedScene" uid="uid://b55f44xr6rpjx" path="res://world_map.tscn" id="2_xhc2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qep2l"]
 size = Vector2(206, 40)
 
 [node name="Node2D" type="Node2D"]
-
-[node name="WorldMap" parent="." instance=ExtResource("2_xhc2q")]
-position = Vector2(-659, -504)
 
 [node name="Player" parent="." instance=ExtResource("1_4iihg")]
 position = Vector2(2, 1)
