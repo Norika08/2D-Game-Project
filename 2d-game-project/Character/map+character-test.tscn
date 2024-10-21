@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://21rvaf7b2rdu"]
+[gd_scene load_steps=15 format=3 uid="uid://chb02qoakok5g"]
 
 [ext_resource type="PackedScene" uid="uid://b55f44xr6rpjx" path="res://world_map.tscn" id="1_pcmfg"]
-[ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="2_3tf7u"]
+[ext_resource type="PackedScene" uid="uid://c668dilx5caw4" path="res://character_ver2.tscn" id="2_3tf7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xydvv"]
 size = Vector2(194, 628.5)
@@ -88,7 +88,6 @@ shape = SubResource("RectangleShape2D_17x1k")
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
 position = Vector2(2834.96, -594.486)
 rotation = 0.139626
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_i4p4f")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
