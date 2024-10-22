@@ -1053,7 +1053,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8quwv")
 }],
-"loop": true,
+"loop": false,
 "name": &"finish_fishing_down",
 "speed": 5.0
 }, {
@@ -1076,7 +1076,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2gtl7")
 }],
-"loop": true,
+"loop": false,
 "name": &"finish_fishing_left",
 "speed": 5.0
 }, {
@@ -1099,7 +1099,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rdk0t")
 }],
-"loop": true,
+"loop": false,
 "name": &"finish_fishing_right",
 "speed": 5.0
 }, {
@@ -1122,7 +1122,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x55iy")
 }],
-"loop": true,
+"loop": false,
 "name": &"finish_fishing_up",
 "speed": 5.0
 }, {
@@ -1206,8 +1206,9 @@ script = ExtResource("1_sk4d2")
 zoom = Vector2(4, 4)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_2bpo5")
-animation = &"finish_fishing_up"
+animation = &"finish_fishing_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_rvx3q")
