@@ -45,7 +45,7 @@ size = Vector2(501, 551)
 position = Vector2(0, 98)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="WorldMap"]
-position = Vector2(0, -98)
+position = Vector2(481, 809)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldMap/StaticBody2D"]
 position = Vector2(-394, 242.25)
