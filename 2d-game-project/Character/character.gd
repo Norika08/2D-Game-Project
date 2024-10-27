@@ -160,7 +160,7 @@ func _physics_process(delta: float) -> void:
 		elif direction.is_equal_approx(Vector2(1, 0)):
 			$AnimatedSprite2D.play("chopping_right")
 		is_chopping = true
-		$"chopping Timer".start()  
+		#$"chopping Timer".start()  
 	
 	if Input.is_action_just_pressed("digging"):
 		if direction.is_equal_approx(Vector2(0, 1)):
@@ -172,7 +172,7 @@ func _physics_process(delta: float) -> void:
 		elif direction.is_equal_approx(Vector2(1, 0)):
 			$AnimatedSprite2D.play("digging_right")
 		is_digging = true
-		$"digging Timer".start()  
+		#$"digging Timer".start()  
 
 	#
 	#if Input.is_action_pressed("start_fishing"):
@@ -205,6 +205,7 @@ func _physics_process(delta: float) -> void:
 			moving = false
 			#is_fishing = false
 			pass
+		
 		elif is_fishing_idling:
 			#fishing idle
 			#fishing = true
@@ -218,6 +219,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("idle_fishing_right")
 			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("idle_fishing_left")
+		
 		elif is_finish_fishing:
 			if direction.is_equal_approx(Vector2(0, 1)):
 				$AnimatedSprite2D.play("finish_fishing_down")
@@ -237,6 +239,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("chopping_left")
 			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("chopping_right")
+		
 		elif is_digging:
 			if direction.is_equal_approx(Vector2(0, 1)):
 				$AnimatedSprite2D.play("digging_down")
@@ -246,6 +249,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("digging_left")
 			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("digging_right")
+		
 		else:
 			if direction.is_equal_approx(Vector2(0, 1)):
 				$AnimatedSprite2D.play("Idling_down")
