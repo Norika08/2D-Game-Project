@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw5xfxi7twwwh"]
+
+[ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="1_k7hob"]
+
+[node name="wood" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-19, 0)
+texture = ExtResource("1_k7hob")
+region_enabled = true
+region_rect = Rect2(239.401, 80.1194, 16.5994, 18.4391)
