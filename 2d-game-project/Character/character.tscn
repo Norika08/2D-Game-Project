@@ -1,14 +1,14 @@
 [gd_scene load_steps=212 format=3 uid="uid://oygvba8kgfnp"]
 
-[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_1wydk"]
+[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_1wydk"]
 [ext_resource type="Script" path="res://character.gd" id="1_sk4d2"]
-[ext_resource type="Texture2D" uid="uid://d4g1xjknuu54" path="res://basic/run.png" id="2_gc3jv"]
-[ext_resource type="Texture2D" uid="uid://dvgmxklgpexrt" path="res://basic/idle.png" id="2_kefqc"]
-[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="2_muaph"]
-[ext_resource type="Texture2D" uid="uid://bon0gx0a2vrag" path="res://basic/walk.png" id="3_ce3v8"]
-[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="3_xav7d"]
-[ext_resource type="Texture2D" uid="uid://cjr0qu2vvle53" path="res://Assets/02. Base Character - Premium/farming/axe.png" id="6_iwu42"]
-[ext_resource type="Texture2D" uid="uid://t6iaxqyxbbo7" path="res://Assets/02. Base Character - Premium/farming/pickaxe.png" id="7_8kbn8"]
+[ext_resource type="Texture2D" uid="uid://d4g1xjknuu54" path="res://Materials/basic/run.png" id="2_gc3jv"]
+[ext_resource type="Texture2D" uid="uid://dvgmxklgpexrt" path="res://Materials/basic/idle.png" id="2_kefqc"]
+[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="2_muaph"]
+[ext_resource type="Texture2D" uid="uid://bon0gx0a2vrag" path="res://Materials/basic/walk.png" id="3_ce3v8"]
+[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="3_xav7d"]
+[ext_resource type="Texture2D" uid="uid://cjr0qu2vvle53" path="res://Materials/farming/axe.png" id="6_iwu42"]
+[ext_resource type="Texture2D" uid="uid://t6iaxqyxbbo7" path="res://Materials/farming/pickaxe.png" id="7_8kbn8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jovrq"]
 atlas = ExtResource("2_gc3jv")

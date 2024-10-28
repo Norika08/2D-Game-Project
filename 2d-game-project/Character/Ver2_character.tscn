@@ -1,12 +1,12 @@
 [gd_scene load_steps=156 format=3 uid="uid://b1gdu2ccyibep"]
 
 [ext_resource type="Script" path="res://character.gd" id="1_e3con"]
-[ext_resource type="Texture2D" uid="uid://d4g1xjknuu54" path="res://basic/run.png" id="2_mc0w6"]
-[ext_resource type="Texture2D" uid="uid://dvgmxklgpexrt" path="res://basic/idle.png" id="3_ugnqh"]
-[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="4_vd508"]
-[ext_resource type="Texture2D" uid="uid://bon0gx0a2vrag" path="res://basic/walk.png" id="5_3t42y"]
-[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="6_m5g2r"]
-[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="7_q62g0"]
+[ext_resource type="Texture2D" uid="uid://d4g1xjknuu54" path="res://Materials/basic/run.png" id="2_mc0w6"]
+[ext_resource type="Texture2D" uid="uid://dvgmxklgpexrt" path="res://Materials/basic/idle.png" id="3_ugnqh"]
+[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="4_vd508"]
+[ext_resource type="Texture2D" uid="uid://bon0gx0a2vrag" path="res://Materials/basic/walk.png" id="5_3t42y"]
+[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="6_m5g2r"]
+[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="7_q62g0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jovrq"]
 atlas = ExtResource("2_mc0w6")

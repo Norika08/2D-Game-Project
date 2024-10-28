@@ -1,33 +1,32 @@
-[gd_scene load_steps=64 format=4 uid="uid://b55f44xr6rpjx"]
+[gd_scene load_steps=63 format=4 uid="uid://b55f44xr6rpjx"]
 
-[ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Tilesets/Spring/grass-water.png" id="1_8meoj"]
-[ext_resource type="Texture2D" uid="uid://by5n1fbfiupyr" path="res://Tilesets/Spring/grass.png" id="2_tixbe"]
-[ext_resource type="Texture2D" uid="uid://bvpc68os1m3h2" path="res://Tilesets/Summer/extras/waterfall - bottom.png" id="3_7jsxk"]
-[ext_resource type="Texture2D" uid="uid://b8mmi6odtdwms" path="res://Tilesets/Spring/hill - water2.png" id="3_f32yv"]
-[ext_resource type="Texture2D" uid="uid://br0q4gey5nwpn" path="res://Tilesets/Spring/hill - path.png" id="4_0up76"]
-[ext_resource type="Texture2D" uid="uid://koc66dlb4hjs" path="res://Tilesets/Summer/extras/waterfall - left.png" id="4_tvuw1"]
-[ext_resource type="Texture2D" uid="uid://bruvu0b83si01" path="res://Tilesets/Summer/extras/waterfall - top.png" id="5_12xuy"]
-[ext_resource type="Texture2D" uid="uid://byji4hgjh1ci6" path="res://Tilesets/Spring/hill - water.png" id="5_hllje"]
-[ext_resource type="Texture2D" uid="uid://dl0pjyiyqhkga" path="res://Tilesets/Summer/simplified/tileset - simplified transparent.png" id="6_lnqc3"]
-[ext_resource type="Texture2D" uid="uid://bv512knm7qcpf" path="res://Tilesets/Spring/texture.png" id="6_yrwtc"]
-[ext_resource type="Texture2D" uid="uid://ugdhtkjlaob8" path="res://Tilesets/Spring/water.png" id="7_gqsb2"]
-[ext_resource type="Texture2D" uid="uid://1y04f6b7aq4b" path="res://Tilesets/Summer/simplified/tileset - simplified.png" id="7_u28s3"]
-[ext_resource type="Texture2D" uid="uid://cwxciqq8x702y" path="res://Tilesets/Spring/grass-path.png" id="8_6u6pc"]
-[ext_resource type="Texture2D" uid="uid://cenps5o7tcbpy" path="res://Tilesets/autotiles rules.png" id="8_jcxm2"]
-[ext_resource type="Texture2D" uid="uid://somu7ugcygyo" path="res://Tilesets/Summer/extras/bridge.png" id="9_ke7t2"]
-[ext_resource type="Texture2D" uid="uid://duni8dq42b5x6" path="res://Tilesets/Summer/autotiles/autotiles grass-water.png" id="10_d54je"]
-[ext_resource type="Texture2D" uid="uid://3uikaf5wt2ix" path="res://Tilesets/Summer/texture.png" id="11_y2fxn"]
-[ext_resource type="Texture2D" uid="uid://8q2p7nlvhgba" path="res://Tilesets/Fall/water.png" id="12_7ugab"]
-[ext_resource type="Texture2D" uid="uid://b0dmw40wnhrlt" path="res://Tilesets/Fall/grass-water.png" id="14_mypms"]
-[ext_resource type="Texture2D" uid="uid://cgmmetp3ishhf" path="res://Tilesets/Spring/hill.png" id="15_wklqv"]
-[ext_resource type="Texture2D" uid="uid://cwuvrjtdoed0r" path="res://Tilesets/Summer/autotiles/autotiles hill.png" id="16_ies8n"]
-[ext_resource type="Texture2D" uid="uid://1r7h6uvugjkv" path="res://Tilesets/Summer/water.png" id="17_x7aft"]
-[ext_resource type="Texture2D" uid="uid://brw5pxsqxf7eb" path="res://Tilesets/Spring/extras/waterfall - bottom.png" id="18_hgx88"]
-[ext_resource type="Texture2D" uid="uid://d3qjligkupc3a" path="res://Tilesets/Summer/hill.png" id="19_fssg0"]
-[ext_resource type="Texture2D" uid="uid://g6gu612mkrtn" path="res://Tilesets/Summer/extras/props.png" id="20_dylji"]
-[ext_resource type="Texture2D" uid="uid://nvoy3am6yygo" path="res://Tilesets/Summer/extras/slope.png" id="21_k5cor"]
-[ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Tilesets/Spring/extras/props.png" id="27_kaxtt"]
-[ext_resource type="PackedScene" uid="uid://cmfi3c4loovg1" path="res://player.tscn" id="28_d5gsh"]
+[ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_8meoj"]
+[ext_resource type="Texture2D" uid="uid://by5n1fbfiupyr" path="res://Materials/Tilesets/Spring/grass.png" id="2_tixbe"]
+[ext_resource type="Texture2D" uid="uid://bvpc68os1m3h2" path="res://Materials/Tilesets/Summer/extras/waterfall - bottom.png" id="3_7jsxk"]
+[ext_resource type="Texture2D" uid="uid://b8mmi6odtdwms" path="res://Materials/Tilesets/Spring/hill - water2.png" id="3_f32yv"]
+[ext_resource type="Texture2D" uid="uid://br0q4gey5nwpn" path="res://Materials/Tilesets/Spring/hill - path.png" id="4_0up76"]
+[ext_resource type="Texture2D" uid="uid://koc66dlb4hjs" path="res://Materials/Tilesets/Summer/extras/waterfall - left.png" id="4_tvuw1"]
+[ext_resource type="Texture2D" uid="uid://bruvu0b83si01" path="res://Materials/Tilesets/Summer/extras/waterfall - top.png" id="5_12xuy"]
+[ext_resource type="Texture2D" uid="uid://byji4hgjh1ci6" path="res://Materials/Tilesets/Spring/hill - water.png" id="5_hllje"]
+[ext_resource type="Texture2D" uid="uid://dl0pjyiyqhkga" path="res://Materials/Tilesets/Summer/simplified/tileset - simplified transparent.png" id="6_lnqc3"]
+[ext_resource type="Texture2D" uid="uid://bv512knm7qcpf" path="res://Materials/Tilesets/Spring/texture.png" id="6_yrwtc"]
+[ext_resource type="Texture2D" uid="uid://ugdhtkjlaob8" path="res://Materials/Tilesets/Spring/water.png" id="7_gqsb2"]
+[ext_resource type="Texture2D" uid="uid://1y04f6b7aq4b" path="res://Materials/Tilesets/Summer/simplified/tileset - simplified.png" id="7_u28s3"]
+[ext_resource type="Texture2D" uid="uid://cwxciqq8x702y" path="res://Materials/Tilesets/Spring/grass-path.png" id="8_6u6pc"]
+[ext_resource type="Texture2D" uid="uid://cenps5o7tcbpy" path="res://Materials/Tilesets/autotiles rules.png" id="8_jcxm2"]
+[ext_resource type="Texture2D" uid="uid://somu7ugcygyo" path="res://Materials/Tilesets/Summer/extras/bridge.png" id="9_ke7t2"]
+[ext_resource type="Texture2D" uid="uid://duni8dq42b5x6" path="res://Materials/Tilesets/Summer/autotiles/autotiles grass-water.png" id="10_d54je"]
+[ext_resource type="Texture2D" uid="uid://3uikaf5wt2ix" path="res://Materials/Tilesets/Summer/texture.png" id="11_y2fxn"]
+[ext_resource type="Texture2D" uid="uid://8q2p7nlvhgba" path="res://Materials/Tilesets/Fall/water.png" id="12_7ugab"]
+[ext_resource type="Texture2D" uid="uid://b0dmw40wnhrlt" path="res://Materials/Tilesets/Fall/grass-water.png" id="14_mypms"]
+[ext_resource type="Texture2D" uid="uid://cgmmetp3ishhf" path="res://Materials/Tilesets/Spring/hill.png" id="15_wklqv"]
+[ext_resource type="Texture2D" uid="uid://cwuvrjtdoed0r" path="res://Materials/Tilesets/Summer/autotiles/autotiles hill.png" id="16_ies8n"]
+[ext_resource type="Texture2D" uid="uid://1r7h6uvugjkv" path="res://Materials/Tilesets/Summer/water.png" id="17_x7aft"]
+[ext_resource type="Texture2D" uid="uid://brw5pxsqxf7eb" path="res://Materials/Tilesets/Spring/extras/waterfall - bottom.png" id="18_hgx88"]
+[ext_resource type="Texture2D" uid="uid://d3qjligkupc3a" path="res://Materials/Tilesets/Summer/hill.png" id="19_fssg0"]
+[ext_resource type="Texture2D" uid="uid://g6gu612mkrtn" path="res://Materials/Tilesets/Summer/extras/props.png" id="20_dylji"]
+[ext_resource type="Texture2D" uid="uid://nvoy3am6yygo" path="res://Materials/Tilesets/Summer/extras/slope.png" id="21_k5cor"]
+[ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="27_kaxtt"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="29_tv8ke"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upylx"]
@@ -3753,13 +3752,5 @@ tile_set = SubResource("TileSet_221o5")
 tile_map_data = PackedByteArray("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AABRAPX/AQAJAAIAAABKAPj/AQALAAEAAABHAPf/AQALAAEAAABFAPT/AQALAAEAAABXAPb/AQALAAEAAABWAPf/AQALAAEAAABWAPj/AQALAAEAAABUAP3/AQALAAEAAABRAPT/AQAMAAEAAABQAPP/AQAMAAEAAABQAPr/AQAMAAEAAABNAPr/AQAMAAEAAABMAP3/AQAMAAEAAABJAPz/AQAMAAEAAABPAPD/AQAMAAEAAABOAPj/AQALAAEAAABQAPv/AQALAAEAAABPAPr/AQAMAAIAAABJAPf/AQAMAAIAAABGAPX/AQAMAAIAAABOAPL/AQAMAAIAAABRAPj/AQAMAAIAAABUAPz/AQAMAAIAAABbABEAAQAKAAEAAABOABcAAQAKAAEAAABRABgAAQAKAAEAAABWABkAAQALAAIAAABVABcAAQALAAIAAABNAB0AAQALAAIAAABSAA8AAQALAAIAAABcAB4AAQALAAIAAABhAB8AAQAMAAMAAABfABkAAQAMAAMAAABYACAAAQAMAAMAAABRACEAAQAMAAMAAABSABwAAQAMAAMAAABTAB0AAQALAAIAAABSAB4AAQALAAIAAABVABoAAQALAAIAAABJABAAAQALAAIAAABHABkAAQALAAIAAABAABwAAQAMAAMAAAA9AB4AAQAMAAMAAABcAAwAAQAMAAMAAABfACYAAQAMAAMAAABgAC0AAQAKAAMAAABSACsAAQAKAAMAAABJAB4AAQAKAAMAAABIACAAAQAKAAMAAAAgACkAAQAJAAMAAAAVACEAAQAJAAMAAABNAPX/AAANAAgAAABMAPT/AAAOAAgAAABOAPX/AAAPAAgAAABLAPb/AAANAAgAABBMAPb/AAAOAAgAADBPAPf/AAAMAAgAAABLAPX/AAAPAAgAACBRAAQAAAALAAgAAABQAAUAAAALAAgAAABQAAQAAAAKAAgAAABPAAUAAAAJAAgAAABQAAYAAAAJAAgAAABSAAYAAAAKAAgAAABOAAgAAAAOAAgAAABQAAkAAAAPAAgAAABPAAkAAAANAAgAAABKAAcAAAANAAoAAABJAAgAAAAOAAoAABBEAOL/AAALAAgAAABDAOP/AAAKAAgAAABEAOP/AAAJAAgAAABCAOT/AAAJAAgAAABCAOP/AAALAAgAAABFAOP/AAALAAgAABBBAOP/AAAJAAkAAABMAOf/AAAMAAkAAABLAOb/AAALAAkAAABDAOL/AAAJAAgAABAtAPj/AAAKAAQAAAAyAP7/AAAMAAQAAAArAAYAAAAMAAQAAAApAAoAAAALAAUAAAAjAAcAAAALAAUAAAAyAPf/AAALAAUAAAAcAAoAAAALAAUAAAAsAA0AAAAMAAUAAAAdAAkAAAAMAAUAAAAqABIAAAAMAAYAAAApAPr/AAAMAAYAAAAlAAwAAAAKAAUAAAAmABsAAAAKAAQAAAAfABoAAAAKAAUAAAAlABYAAAAKAAUAAAApAB4AAAAKAAQAAAAkAB8AAAAJAAQAAAApABkAAAAMAAQAAAAqAB4AAAAMAAUAAAAjABwAAAAMAAUAAAAcABgAAAAMAAUAAAAlABoAAAALAAYAAAAqABgAAAALAAYAAAAnAB8AAAALAAYAAAAgABkAAAALAAYAAAB4APL/AAALAAYAAAB1APb/AAALAAYAAAB0AAIAAAALAAYAAABuAAAAAAAMAAQAAAB2APX/AAAMAAQAAAB1APj/AAALAAUAAAB2APT/AAAMAAUAAAB2AAYAAAAMAAUAAAB4AAQAAAAMAAUAAABrAP7/AAAMAAUAAACAAO7/AAAMAAUAAAB/AO3/AAALAAYAAAB+AAcAAAAKAAUAAAB0AAoAAAAKAAUAAACJAPT/AAAKAAUAAACTAP3/AAAKAAUAAACUAP//AAAKAAUAAAC5AC4AAAAKAAUAAACPAAEAAAAJAAQAAACQAAUAAAAJAAQAAACAABAAAAAJAAQAAABrAAkAAAAJAAQAAABnAP7/AAAJAAQAAABrAPb/AAAJAAQAAABjAAQAAAAKAAUAAABkAAMAAAAJAAUAAACAAPn/AAAJAAUAAACIAP3/AAAJAAUAAACHAPH/AAAJAAUAAACPAOv/AAAJAAUAAACQAO3/AAAMAAQAAACPAO//AAAMAAQAAACaAPX/AAAMAAQAAAB/AAAAAAAMAAQAAACbAPj/AAALAAUAAACNAO7/AAALAAUAAACOAPD/AAAMAAUAAAB2AOz/AAAMAAUAAABzAPX/AAAMAAUAAABzAP7/AAAMAAUAAAA=")
 tile_set = SubResource("TileSet_gopnh")
 
-[node name="Player" parent="." instance=ExtResource("28_d5gsh")]
-visible = false
-position = Vector2(961, 1214)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("29_tv8ke")]
-position = Vector2(1008, 1243)
-
-[node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(-16, -51)
-zoom = Vector2(4, 4)
+[node name="CharacterBody2D2" parent="." instance=ExtResource("29_tv8ke")]
+position = Vector2(593, 1079)

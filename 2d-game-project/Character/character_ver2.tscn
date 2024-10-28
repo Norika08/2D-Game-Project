@@ -1,8 +1,8 @@
 [gd_scene load_steps=56 format=3 uid="uid://bt6ujjo34dat6"]
 
-[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_1wydk"]
-[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="2_muaph"]
-[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="3_xav7d"]
+[ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_1wydk"]
+[ext_resource type="Texture2D" uid="uid://cuawu606sjeom" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-catch.png" id="2_muaph"]
+[ext_resource type="Texture2D" uid="uid://dnjdofb8qiaoj" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-idle.png" id="3_xav7d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y2dqn"]
 atlas = ExtResource("1_1wydk")
