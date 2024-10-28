@@ -163,7 +163,11 @@ func _physics_process(delta: float) -> void:
 		#$"chopping Timer".start()  
 		if nearby.name == "trees":
 			var newwood = WOOD.instantiate()
-			add_child(newwood)
+			#nearby.add_child(newwood)
+			print(position)
+			newwood.position = position
+			print(newwood.position)
+			$"..".add_child(newwood)
 	
 	if Input.is_action_just_pressed("digging"):
 		if direction.is_equal_approx(Vector2(0, 1)):

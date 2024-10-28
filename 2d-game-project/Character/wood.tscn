@@ -1,11 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://bw5xfxi7twwwh"]
+[gd_scene load_steps=3 format=3 uid="uid://bw5xfxi7twwwh"]
 
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="1_k7hob"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxgy3"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"no_wood",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"wood",
+"speed": 5.0
+}]
 
 [node name="wood" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-19, 0)
+position = Vector2(-18, 0)
 texture = ExtResource("1_k7hob")
 region_enabled = true
 region_rect = Rect2(239.401, 80.1194, 16.5994, 18.4391)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cxgy3")
+animation = &"wood"
