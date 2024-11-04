@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=81 format=4 uid="uid://cfaca4d71dp5i"]
-=======
-[gd_scene load_steps=76 format=4 uid="uid://y5gkltlb7koc"]
->>>>>>> Stashed changes
+[gd_scene load_steps=84 format=4 uid="uid://y5gkltlb7koc"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_0j56i"]
 [ext_resource type="Script" path="res://world_audio_manager.gd" id="1_gq4sg"]
@@ -4807,6 +4803,6 @@ stream = ExtResource("33_c78xm")
 
 [node name="catch_fish" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("34_hufpe")
-volume_db = 0.2
+volume_db = 16.571
 
 [connection signal="child_entered_tree" from="TileMap/river" to="TileMap/river" method="_on_child_entered_tree"]
