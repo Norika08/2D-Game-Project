@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=4 uid="uid://b55f44xr6rpjx"]
+[gd_scene load_steps=73 format=4 uid="uid://b55f44xr6rpjx"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_8meoj"]
 [ext_resource type="Texture2D" uid="uid://by5n1fbfiupyr" path="res://Materials/Tilesets/Spring/grass.png" id="2_tixbe"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="27_kaxtt"]
 [ext_resource type="PackedScene" uid="uid://cmfi3c4loovg1" path="res://player.tscn" id="28_d5gsh"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="29_tv8ke"]
+[ext_resource type="AudioStream" uid="uid://dhyg1pxy8ynuj" path="res://backgrondmusic.mp3" id="31_qlycp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upylx"]
 texture = ExtResource("1_8meoj")
@@ -4246,3 +4247,6 @@ position = Vector2(943, 1362)
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D3"]
 position = Vector2(-40, -49)
 zoom = Vector2(4, 4)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_qlycp")
