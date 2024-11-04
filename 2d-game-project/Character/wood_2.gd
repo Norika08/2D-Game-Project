@@ -4,12 +4,18 @@ extends Area2D
 #onready var label :=$wood_counter
 
 
-func _on_body_entered(body):
+#func _on_body_entered(body):
+	#if body.name == "CharacterBody2D":
+		#collect_sound.play()
+		#queue_free()
+		##label.text= collect_wood + 1
+
+func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		collect_sound.play()
+		body.wood_counter += 1
+		body.update_ui()
 		queue_free()
-		#label.text= collect_wood + 1
-
 		
 		
 		
