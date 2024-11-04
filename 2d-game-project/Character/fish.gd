@@ -16,4 +16,6 @@ func _on_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 	if body.name == "CharacterBody2D":
 		collect_sound.play()
+		body.fish_counter += 1
+		body.update_ui()
 		queue_free()

@@ -5,7 +5,8 @@ const SPEED = 100.0
 const DASH_SPEED = 200.0
 var move_velocity = Vector2(0, 0)
 var moving = false
-const wood_counter = 0
+var wood_counter = 0
+var fish_counter = 0
 
 #var is_start_fishing = false
 var fishing = false
@@ -16,6 +17,7 @@ var is_dashing = false
 var is_chopping = false
 var is_digging = false
 var is_fishing_success = false
+
 #const JUMP_VELOCITY = -400.0
 #const WOOD = preload("res://wood.tscn")
 const WOOD = preload("res://wood2.tscn")
@@ -365,8 +367,11 @@ func _on_fishing_timer_timeout() -> void:
 			print(newfish.position)
 			$"..".add_child(newfish)
 	
-
-
+func update_ui():
+	print(fish_counter)
+	print(wood_counter)
+	$Camera2D2/bag/fish_counter.text = str(fish_counter)
+	$Camera2D2/bag/wood_counter.text = str(wood_counter)
 
 
 	
