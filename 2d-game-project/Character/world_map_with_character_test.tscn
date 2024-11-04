@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=4 uid="uid://cfaca4d71dp5i"]
+[gd_scene load_steps=81 format=4 uid="uid://cfaca4d71dp5i"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_0j56i"]
 [ext_resource type="Script" path="res://world_audio_manager.gd" id="1_gq4sg"]
@@ -33,6 +33,11 @@
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="28_pn5bg"]
 [ext_resource type="Script" path="res://trees.gd" id="29_336j7"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="30_2dxew"]
+[ext_resource type="Texture2D" uid="uid://bougod4p3muw" path="res://Materials/Pixel UI & Icons, Jacob Bergholtz.png" id="34_vtwtq"]
+[ext_resource type="Texture2D" uid="uid://cxa02sfj7ee8" path="res://Materials/music.png" id="35_11kct"]
+[ext_resource type="Texture2D" uid="uid://cr63dyiw4mkjb" path="res://Materials/plane_2.png" id="36_4mfg2"]
+[ext_resource type="Texture2D" uid="uid://bvarfw4hinnny" path="res://Materials/menu.png" id="37_cg5kr"]
+[ext_resource type="Script" path="res://texture_button.gd" id="37_homki"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_aq225"]
 clip_count = 1
@@ -4316,10 +4321,50 @@ tile_map_data = PackedByteArray("AAA5AD8AAQAMAAEAAAA2AEEAAQAMAAEAAAAyADcAAQAMAAE
 tile_set = SubResource("TileSet_gopnh")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("30_2dxew")]
-position = Vector2(919, 1364)
+position = Vector2(916, 1367)
 
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-16, -51)
 zoom = Vector2(4, 4)
+
+[node name="bag" type="Sprite2D" parent="CharacterBody2D/Camera2D2"]
+position = Vector2(18, 162)
+scale = Vector2(0.181627, 0.181627)
+texture = ExtResource("34_vtwtq")
+
+[node name="music" type="Sprite2D" parent="CharacterBody2D/Camera2D2"]
+visible = false
+position = Vector2(127, -18)
+scale = Vector2(0.110734, 0.110734)
+texture = ExtResource("35_11kct")
+hframes = 2
+
+[node name="plane" type="Sprite2D" parent="CharacterBody2D/Camera2D2"]
+position = Vector2(-101, -8.99998)
+scale = Vector2(0.110734, 0.110734)
+texture = ExtResource("36_4mfg2")
+
+[node name="MenuButton" type="TextureButton" parent="CharacterBody2D/Camera2D2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("37_homki")
+
+[node name="menu" type="Sprite2D" parent="CharacterBody2D/Camera2D2/MenuButton"]
+position = Vector2(147, -34)
+scale = Vector2(0.108626, 0.108626)
+texture = ExtResource("37_cg5kr")
+
+[node name="TextureButton2" type="TextureButton" parent="CharacterBody2D/Camera2D2"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="CharacterBody2D/Camera2D2"]
+visible = false
+offset_left = 92.0
+offset_top = 16.0
+offset_right = 132.0
+offset_bottom = 56.0
 
 [connection signal="child_entered_tree" from="TileMap/river" to="TileMap/river" method="_on_child_entered_tree"]
