@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		#$AnimatedSprite2D.play("Fishing_" + get_fishing_direction())
 		#return 
 
-	if not is_fishing_idling or not is_fishing or not is_finish_fishing or not moving:
+	if not is_fishing_idling or not is_fishing or not is_finish_fishing or not moving  or not is_chopping:
 		if Input.is_action_pressed("down"):
 			velocity.y += SPEED
 			direction = Vector2(0, 1)
