@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://cfaca4d71dp5i"]
+[gd_scene load_steps=91 format=4 uid="uid://cfaca4d71dp5i"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_0j56i"]
 [ext_resource type="Script" path="res://world_audio_manager.gd" id="1_gq4sg"]
@@ -33,14 +33,15 @@
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="28_pn5bg"]
 [ext_resource type="Script" path="res://trees.gd" id="29_336j7"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="30_2dxew"]
-[ext_resource type="Texture2D" uid="uid://bougod4p3muw" path="res://Materials/Pixel UI & Icons, Jacob Bergholtz.png" id="34_vtwtq"]
-[ext_resource type="Texture2D" uid="uid://cxa02sfj7ee8" path="res://Materials/music.png" id="35_11kct"]
-[ext_resource type="Texture2D" uid="uid://cr63dyiw4mkjb" path="res://Materials/plane_2.png" id="36_4mfg2"]
-[ext_resource type="Texture2D" uid="uid://bvarfw4hinnny" path="res://Materials/menu.png" id="37_cg5kr"]
-[ext_resource type="Script" path="res://texture_button.gd" id="37_homki"]
 [ext_resource type="AudioStream" uid="uid://cg4ivlggsqnb7" path="res://BGM/木が倒れる.mp3" id="32_gr8fk"]
 [ext_resource type="AudioStream" uid="uid://clm72ydocbwel" path="res://BGM/リールの糸放出3.mp3" id="33_c78xm"]
 [ext_resource type="AudioStream" uid="uid://buciby0oe1q13" path="res://BGM/魚を釣り上げる.mp3" id="34_hufpe"]
+[ext_resource type="Texture2D" uid="uid://bougod4p3muw" path="res://Materials/Pixel UI & Icons, Jacob Bergholtz.png" id="34_vtwtq"]
+[ext_resource type="Texture2D" uid="uid://cxa02sfj7ee8" path="res://Materials/music.png" id="35_11kct"]
+[ext_resource type="Texture2D" uid="uid://dlkhy6xo25dp1" path="res://Materials/Tilesets/128x256-RAPIDPUNCHES-FEB2021-1.png" id="35_m8s4f"]
+[ext_resource type="Texture2D" uid="uid://cr63dyiw4mkjb" path="res://Materials/plane_2.png" id="36_4mfg2"]
+[ext_resource type="Texture2D" uid="uid://bvarfw4hinnny" path="res://Materials/menu.png" id="37_cg5kr"]
+[ext_resource type="Script" path="res://texture_button.gd" id="37_homki"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_aq225"]
 clip_count = 1
@@ -4700,6 +4701,10 @@ sources/1 = SubResource("TileSetAtlasSource_8ups6")
 sources/2 = SubResource("TileSetAtlasSource_lpd65")
 sources/3 = SubResource("TileSetAtlasSource_pewia")
 
+[sub_resource type="LabelSettings" id="LabelSettings_o754e"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
 [node name="WorldMap" type="Node2D"]
 
 [node name="WorldAudioManager" type="Node2D" parent="."]
@@ -4803,6 +4808,36 @@ position = Vector2(18, 162)
 scale = Vector2(0.181627, 0.181627)
 texture = ExtResource("34_vtwtq")
 
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Camera2D2/bag"]
+position = Vector2(-269.784, -198.209)
+scale = Vector2(4.03759, 5.04697)
+texture = ExtResource("35_m8s4f")
+region_enabled = true
+region_rect = Rect2(80.0234, 104.804, 15.956, 15.1179)
+
+[node name="fish_counter" type="Label" parent="CharacterBody2D/Camera2D2/bag"]
+offset_left = -308.324
+offset_top = -253.266
+offset_right = -268.324
+offset_bottom = -203.266
+text = "0"
+label_settings = SubResource("LabelSettings_o754e")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D/Camera2D2/bag"]
+position = Vector2(-192.703, -198.208)
+scale = Vector2(3.95728, 3.95728)
+texture = ExtResource("28_pn5bg")
+region_enabled = true
+region_rect = Rect2(239.401, 80.1194, 16.5994, 18.4391)
+
+[node name="wood_counter" type="Label" parent="CharacterBody2D/Camera2D2/bag"]
+offset_left = -225.737
+offset_top = -253.266
+offset_right = -185.737
+offset_bottom = -203.266
+text = "0"
+label_settings = SubResource("LabelSettings_o754e")
+
 [node name="music" type="Sprite2D" parent="CharacterBody2D/Camera2D2"]
 visible = false
 position = Vector2(127, -18)
@@ -4837,6 +4872,7 @@ offset_left = 92.0
 offset_top = 16.0
 offset_right = 132.0
 offset_bottom = 56.0
+
 [node name="wood_sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(919, 1364)
 stream = ExtResource("32_gr8fk")
