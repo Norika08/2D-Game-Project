@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckshlqno261tr"]
+[gd_scene load_steps=5 format=3 uid="uid://ckshlqno261tr"]
 
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="1_dncft"]
 [ext_resource type="Script" path="res://wood_2.gd" id="1_wx31o"]
+[ext_resource type="AudioStream" uid="uid://t13tkm0ieirw" path="res://BGM/カーソル移動11.mp3" id="3_xn13m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1j58q"]
 radius = 11.0
@@ -18,5 +19,10 @@ region_rect = Rect2(240.013, 79.8872, 16.1151, 16.3777)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-22, 0)
 shape = SubResource("CircleShape2D_1j58q")
+
+[node name="collect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xn13m")
+volume_db = 11.0
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
