@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckshlqno261tr"]
+
+[ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="1_dncft"]
+[ext_resource type="Script" path="res://wood_2.gd" id="1_wx31o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1j58q"]
+radius = 11.0
+
+[node name="wood" type="Area2D"]
+script = ExtResource("1_wx31o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-22, 0)
+texture = ExtResource("1_dncft")
+region_enabled = true
+region_rect = Rect2(240.013, 79.8872, 16.1151, 16.3777)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-22, 0)
+shape = SubResource("CircleShape2D_1j58q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

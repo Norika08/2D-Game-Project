@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=3 uid="uid://oygvba8kgfnp"]
+[gd_scene load_steps=214 format=3 uid="uid://oygvba8kgfnp"]
 
 [ext_resource type="Texture2D" uid="uid://bj08pwn2a6ul7" path="res://Materials/Assets/02. Base Character - Premium/fishing/fishing-casting.png" id="1_1wydk"]
 [ext_resource type="Script" path="res://character.gd" id="1_sk4d2"]
@@ -1580,6 +1580,20 @@ height = 14.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_2jd4q"]
 radius = 16.0312
 
+[sub_resource type="GDScript" id="GDScript_tqsqc"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_sk4d2")
 
@@ -1611,8 +1625,18 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_2jd4q")
 
+[node name="wood_counter" type="Label" parent="."]
+offset_left = -143.0
+offset_top = -81.0
+offset_right = -112.0
+offset_bottom = -58.0
+text = "0"
+horizontal_alignment = 1
+script = SubResource("GDScript_tqsqc")
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="fishing Timer" to="." method="_on_fishing_timer_timeout"]
 [connection signal="timeout" from="chopping Timer" to="." method="_on_fishing_timer_timeout"]
 [connection signal="timeout" from="digging Timer" to="." method="_on_fishing_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="child_entered_tree" from="wood_counter" to="." method="_on_wood_counter_child_entered_tree"]

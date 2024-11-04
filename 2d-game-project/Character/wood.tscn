@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bw5xfxi7twwwh"]
+[gd_scene load_steps=5 format=3 uid="uid://eudjpcw7kwkt"]
 
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="1_k7hob"]
+[ext_resource type="Script" path="res://wood.gd" id="1_s011t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cxgy3"]
 animations = [{
@@ -15,7 +16,11 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hyg7n"]
+radius = 7.07107
+
 [node name="wood" type="Node2D"]
+script = ExtResource("1_s011t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-18, 0)
@@ -26,3 +31,9 @@ region_rect = Rect2(239.401, 80.1194, 16.5994, 18.4391)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cxgy3")
 animation = &"wood"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-18, -1)
+shape = SubResource("CircleShape2D_hyg7n")

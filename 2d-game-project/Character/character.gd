@@ -5,6 +5,7 @@ const SPEED = 100.0
 const DASH_SPEED = 200.0
 var move_velocity = Vector2(0, 0)
 var moving = false
+const wood_counter = 0
 
 #var is_start_fishing = false
 var fishing = false
@@ -15,7 +16,9 @@ var is_dashing = false
 var is_chopping = false
 var is_digging = false
 #const JUMP_VELOCITY = -400.0
-const WOOD = preload("res://wood.tscn")
+#const WOOD = preload("res://wood.tscn")
+const WOOD = preload("res://wood2.tscn")
+const FISH = preload("res://fish.tscn")
 @onready var animated_sprites = get_node("AnimatedSprite2D")
 #@onready var fishing_timer = get_node("$fishing Timer")  
 
@@ -149,6 +152,12 @@ func _physics_process(delta: float) -> void:
 		is_fishing_idling = false
 		is_finish_fishing = false
 		$"fishing Timer".start()  
+		if nearby.name == "river":
+			var newfish = FISH.instantiate()
+			print(position)
+			newfish.position = position
+			print(newfish.position)
+			$"..".add_child(newfish)
 		
 	if Input.is_action_just_pressed("chopping"):
 		if direction.is_equal_approx(Vector2(0, 1)):
@@ -308,6 +317,7 @@ func _on_fishing_timer_timeout() -> void:
 	moving = false
 	is_fishing = false
 	
+	
 #func _on_chopping_timer_timeout() -> void:
 	#is_chopping = false
 #
@@ -328,3 +338,7 @@ var nearby
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	nearby = body
 	
+
+
+func _on_wood_counter_child_entered_tree(node: Node) -> void:
+	pass # Replace with function body.
