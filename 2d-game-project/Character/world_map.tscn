@@ -1,6 +1,7 @@
-[gd_scene load_steps=73 format=4 uid="uid://b55f44xr6rpjx"]
+[gd_scene load_steps=75 format=4 uid="uid://b55f44xr6rpjx"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_8meoj"]
+[ext_resource type="Script" path="res://world_audio_manager.gd" id="1_um8vc"]
 [ext_resource type="Texture2D" uid="uid://by5n1fbfiupyr" path="res://Materials/Tilesets/Spring/grass.png" id="2_tixbe"]
 [ext_resource type="Texture2D" uid="uid://bvpc68os1m3h2" path="res://Materials/Tilesets/Summer/extras/waterfall - bottom.png" id="3_7jsxk"]
 [ext_resource type="Texture2D" uid="uid://b8mmi6odtdwms" path="res://Materials/Tilesets/Spring/hill - water2.png" id="3_f32yv"]
@@ -31,6 +32,12 @@
 [ext_resource type="PackedScene" uid="uid://cmfi3c4loovg1" path="res://player.tscn" id="28_d5gsh"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="29_tv8ke"]
 [ext_resource type="AudioStream" uid="uid://dhyg1pxy8ynuj" path="res://backgrondmusic.mp3" id="31_qlycp"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_sskox"]
+clip_count = 1
+clip_0/name = &"GrassMusic"
+clip_0/stream = ExtResource("31_qlycp")
+clip_0/auto_advance = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upylx"]
 texture = ExtResource("1_8meoj")
@@ -4163,6 +4170,15 @@ sources/3 = SubResource("TileSetAtlasSource_pewia")
 
 [node name="WorldMap" type="Node2D"]
 
+[node name="WorldAudioManager" type="Node2D" parent="."]
+script = ExtResource("1_um8vc")
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="WorldAudioManager"]
+stream = SubResource("AudioStreamInteractive_sskox")
+volume_db = -20.0
+autoplay = true
+bus = &"music"
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(479, 802)
 tile_set = SubResource("TileSet_221o5")
@@ -4247,6 +4263,3 @@ position = Vector2(943, 1362)
 [node name="Camera2D2" type="Camera2D" parent="CharacterBody2D3"]
 position = Vector2(-40, -49)
 zoom = Vector2(4, 4)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("31_qlycp")
