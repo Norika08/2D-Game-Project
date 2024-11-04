@@ -24,6 +24,7 @@ const FISH = preload("res://fish.tscn")
 @onready var wood_sound = $"../wood_sound"
 @onready var fishing_sound = $"../Fishing_start"
 @onready var catch_sound = $"../catch_fish"
+@onready var walking_sound =$"../walking"
 #@onready var fishing_timer = get_node("$fishing Timer")  
 
 
@@ -43,6 +44,7 @@ func _physics_process(delta: float) -> void:
 		#return 
 
 	if not is_fishing_idling or not is_fishing or not is_finish_fishing or not moving:
+		walking_sound.play()
 		if Input.is_action_pressed("down"):
 			velocity.y += SPEED
 			direction = Vector2(0, 1)
@@ -300,6 +302,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("digging_right")
 		
 		else:
+			walking_sound.stop()
 			if direction.is_equal_approx(Vector2(0, 1)):
 				$AnimatedSprite2D.play("Idling_down")
 			elif direction.is_equal_approx(Vector2(0, -1)):

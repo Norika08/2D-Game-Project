@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=4 uid="uid://cfaca4d71dp5i"]
+[gd_scene load_steps=90 format=4 uid="uid://y5gkltlb7koc"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_0j56i"]
 [ext_resource type="Script" path="res://world_audio_manager.gd" id="1_gq4sg"]
@@ -33,14 +33,15 @@
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="28_pn5bg"]
 [ext_resource type="Script" path="res://trees.gd" id="29_336j7"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="30_2dxew"]
+[ext_resource type="AudioStream" uid="uid://cg4ivlggsqnb7" path="res://BGM/木が倒れる.mp3" id="32_gr8fk"]
+[ext_resource type="AudioStream" uid="uid://clm72ydocbwel" path="res://BGM/リールの糸放出3.mp3" id="33_c78xm"]
+[ext_resource type="AudioStream" uid="uid://buciby0oe1q13" path="res://BGM/魚を釣り上げる.mp3" id="34_hufpe"]
 [ext_resource type="Texture2D" uid="uid://bougod4p3muw" path="res://Materials/Pixel UI & Icons, Jacob Bergholtz.png" id="34_vtwtq"]
 [ext_resource type="Texture2D" uid="uid://cxa02sfj7ee8" path="res://Materials/music.png" id="35_11kct"]
 [ext_resource type="Texture2D" uid="uid://cr63dyiw4mkjb" path="res://Materials/plane_2.png" id="36_4mfg2"]
 [ext_resource type="Texture2D" uid="uid://bvarfw4hinnny" path="res://Materials/menu.png" id="37_cg5kr"]
 [ext_resource type="Script" path="res://texture_button.gd" id="37_homki"]
-[ext_resource type="AudioStream" uid="uid://cg4ivlggsqnb7" path="res://BGM/木が倒れる.mp3" id="32_gr8fk"]
-[ext_resource type="AudioStream" uid="uid://clm72ydocbwel" path="res://BGM/リールの糸放出3.mp3" id="33_c78xm"]
-[ext_resource type="AudioStream" uid="uid://buciby0oe1q13" path="res://BGM/魚を釣り上げる.mp3" id="34_hufpe"]
+[ext_resource type="AudioStream" uid="uid://ofyvgg5y5fyu" path="res://BGM/落ち葉の上を歩く.mp3" id="37_no51k"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_aq225"]
 clip_count = 1
@@ -4837,6 +4838,7 @@ offset_left = 92.0
 offset_top = 16.0
 offset_right = 132.0
 offset_bottom = 56.0
+
 [node name="wood_sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(919, 1364)
 stream = ExtResource("32_gr8fk")
@@ -4848,5 +4850,8 @@ stream = ExtResource("33_c78xm")
 [node name="catch_fish" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("34_hufpe")
 volume_db = 16.571
+
+[node name="walking" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_no51k")
 
 [connection signal="child_entered_tree" from="TileMap/river" to="TileMap/river" method="_on_child_entered_tree"]
