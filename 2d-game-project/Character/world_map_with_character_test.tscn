@@ -1,7 +1,9 @@
-[gd_scene load_steps=73 format=4 uid="uid://y5gkltlb7koc"]
+[gd_scene load_steps=76 format=4 uid="uid://cfaca4d71dp5i"]
 
 [ext_resource type="Texture2D" uid="uid://bdfvyglh0wna7" path="res://Materials/Tilesets/Spring/grass-water.png" id="1_0j56i"]
+[ext_resource type="Script" path="res://world_audio_manager.gd" id="1_gq4sg"]
 [ext_resource type="Texture2D" uid="uid://by5n1fbfiupyr" path="res://Materials/Tilesets/Spring/grass.png" id="2_dqtrd"]
+[ext_resource type="AudioStream" uid="uid://dhyg1pxy8ynuj" path="res://backgrondmusic.mp3" id="2_johlv"]
 [ext_resource type="Texture2D" uid="uid://bvpc68os1m3h2" path="res://Materials/Tilesets/Summer/extras/waterfall - bottom.png" id="3_tbhc4"]
 [ext_resource type="Texture2D" uid="uid://koc66dlb4hjs" path="res://Materials/Tilesets/Summer/extras/waterfall - left.png" id="4_f60rp"]
 [ext_resource type="Texture2D" uid="uid://bruvu0b83si01" path="res://Materials/Tilesets/Summer/extras/waterfall - top.png" id="5_smijw"]
@@ -31,6 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="28_pn5bg"]
 [ext_resource type="Script" path="res://trees.gd" id="29_336j7"]
 [ext_resource type="PackedScene" uid="uid://oygvba8kgfnp" path="res://character.tscn" id="30_2dxew"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_aq225"]
+clip_count = 1
+clip_0/name = &"GrassMusic"
+clip_0/stream = ExtResource("2_johlv")
+clip_0/auto_advance = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_upylx"]
 texture = ExtResource("1_0j56i")
@@ -4221,6 +4229,15 @@ sources/2 = SubResource("TileSetAtlasSource_lpd65")
 sources/3 = SubResource("TileSetAtlasSource_pewia")
 
 [node name="WorldMap" type="Node2D"]
+
+[node name="WorldAudioManager" type="Node2D" parent="."]
+script = ExtResource("1_gq4sg")
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="WorldAudioManager"]
+stream = SubResource("AudioStreamInteractive_aq225")
+volume_db = -20.0
+autoplay = true
+bus = &"music"
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(480, 800)
