@@ -1626,6 +1626,7 @@ one_shot = true
 shape = SubResource("CircleShape2D_2jd4q")
 
 [node name="wood_counter" type="Label" parent="."]
+visible = false
 offset_left = -143.0
 offset_top = -81.0
 offset_right = -112.0
