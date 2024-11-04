@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://eudjpcw7kwkt"]
+[gd_scene load_steps=6 format=3 uid="uid://eudjpcw7kwkt"]
 
 [ext_resource type="Texture2D" uid="uid://qrbxfw380ytp" path="res://Materials/Tilesets/Spring/extras/props.png" id="1_k7hob"]
 [ext_resource type="Script" path="res://wood.gd" id="1_s011t"]
+[ext_resource type="AudioStream" uid="uid://cg4ivlggsqnb7" path="res://BGM/木が倒れる.mp3" id="3_7ptnn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cxgy3"]
 animations = [{
@@ -37,3 +38,6 @@ animation = &"wood"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-18, -1)
 shape = SubResource("CircleShape2D_hyg7n")
+
+[node name="collect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7ptnn")

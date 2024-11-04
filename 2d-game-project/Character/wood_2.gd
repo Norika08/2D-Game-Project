@@ -1,13 +1,15 @@
 extends Area2D
 
-
+@onready var collect_sound = $collect
 #onready var label :=$wood_counter
 
 
 func _on_body_entered(body):
 	if body.name == "CharacterBody2D":
+		collect_sound.play()
 		queue_free()
 		#label.text= collect_wood + 1
+
 		
 		
 		

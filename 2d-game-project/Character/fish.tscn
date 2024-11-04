@@ -4,19 +4,19 @@
 [ext_resource type="Script" path="res://fish.gd" id="1_stdtf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8k83"]
-radius = 8.0
+radius = 6.08276
 
 [node name="fish" type="Area2D"]
 script = ExtResource("1_stdtf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(-32, 0)
 texture = ExtResource("1_3wjpi")
 region_enabled = true
 region_rect = Rect2(80.0234, 104.804, 15.956, 15.1179)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -14)
+position = Vector2(-32, 0)
 shape = SubResource("CircleShape2D_y8k83")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

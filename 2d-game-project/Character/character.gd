@@ -15,11 +15,15 @@ var is_finish_fishing = false
 var is_dashing = false
 var is_chopping = false
 var is_digging = false
+var is_fishing_success = false
 #const JUMP_VELOCITY = -400.0
 #const WOOD = preload("res://wood.tscn")
 const WOOD = preload("res://wood2.tscn")
 const FISH = preload("res://fish.tscn")
 @onready var animated_sprites = get_node("AnimatedSprite2D")
+@onready var wood_sound = $"../wood_sound"
+@onready var fishing_sound = $"../Fishing_start"
+@onready var catch_sound = $"../catch_fish"
 #@onready var fishing_timer = get_node("$fishing Timer")  
 
 
@@ -133,7 +137,7 @@ func _physics_process(delta: float) -> void:
 
 		
 		
-	if Input.is_action_just_pressed("start_fishing"):
+	if Input.is_action_just_pressed("start_fishing") and nearby.is_in_group("water"):
 		#is_fishing_start = true
 		if direction.is_equal_approx(Vector2(0, 1)):
 			$AnimatedSprite2D.play("Start_fishing_down")
@@ -152,12 +156,30 @@ func _physics_process(delta: float) -> void:
 		is_fishing_idling = false
 		is_finish_fishing = false
 		$"fishing Timer".start()  
-		if nearby.name == "river":
+		fishing_sound.play()
+		print(nearby)
+		if nearby.is_in_group("water"):
+			#is_fishing_success = true
+			
+		#if is_fishing_success = true:
 			var newfish = FISH.instantiate()
-			print(position)
+			print("fish ",position)
 			newfish.position = position
 			print(newfish.position)
 			$"..".add_child(newfish)
+			#var newfish = FISH.instantiate()
+			#print(position)
+			#newfish.position = position
+			#print(newfish.position)
+			#$"..".add_child(newfish)
+			
+			#if nearby.name == "trees":
+			#var newwood = WOOD.instantiate()
+			##nearby.add_child(newwood)
+			#print(position)
+			#newwood.position = position
+			#print(newwood.position)
+			#$"..".add_child(newwood)
 		
 	if Input.is_action_just_pressed("chopping"):
 		if direction.is_equal_approx(Vector2(0, 1)):
@@ -177,6 +199,8 @@ func _physics_process(delta: float) -> void:
 			newwood.position = position
 			print(newwood.position)
 			$"..".add_child(newwood)
+			wood_sound.play()
+			
 	
 	if Input.is_action_just_pressed("digging"):
 		if direction.is_equal_approx(Vector2(0, 1)):
@@ -235,6 +259,8 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("idle_fishing_right")
 			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("idle_fishing_left")
+				
+			#$"fishing Timer".start()  
 		
 		elif is_finish_fishing:
 			if direction.is_equal_approx(Vector2(0, 1)):
@@ -245,6 +271,13 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("finish_fishing_left")
 			elif direction.is_equal_approx(Vector2(1, 0)):
 				$AnimatedSprite2D.play("finish_fishing_right")
+				
+			#if nearby.name == "river":
+				#var newfish = FISH.instantiate()
+				#print(position)
+				#newfish.position = position
+				#print(newfish.position)
+				#$"..".add_child(newfish)
 				
 		elif is_chopping:
 			if direction.is_equal_approx(Vector2(0, 1)):
@@ -287,6 +320,7 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	is_fishing = false
 	is_fishing_idling = true
 	is_finish_fishing = true
+	is_fishing_success = true
 	$"fishing Timer".start()
 
 
@@ -299,6 +333,7 @@ func _on_fishing_timer_timeout() -> void:
 		#is_finish_fishing = true
 		is_fishing = false
 		is_fishing_idling = false
+		
 	elif direction.is_equal_approx(Vector2(0, -1)):
 		$AnimatedSprite2D.play("finish_fishing_up")
 		#is_finish_fishing = true
@@ -316,7 +351,21 @@ func _on_fishing_timer_timeout() -> void:
 		is_fishing_idling = false
 	moving = false
 	is_fishing = false
+	is_fishing_success == true
+	catch_sound.play()
 	
+	if is_fishing_success == true:
+		if nearby.name == "river":
+			var newfish = FISH.instantiate()
+			print(position)
+			newfish.position = position
+			print(newfish.position)
+			$"..".add_child(newfish)
+	
+
+
+
+
 	
 #func _on_chopping_timer_timeout() -> void:
 	#is_chopping = false
