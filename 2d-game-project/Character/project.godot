@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Wendy"
+config/name="2D Game final"
 run/main_scene="res://world_map_with_character_test.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
