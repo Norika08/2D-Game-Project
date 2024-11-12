@@ -4811,7 +4811,6 @@ texture = ExtResource("34_vtwtq")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Camera2D2/bag"]
 position = Vector2(-269.784, -198.209)
 scale = Vector2(4.03759, 5.04697)
-texture = ExtResource("35_m8s4f")
 region_enabled = true
 region_rect = Rect2(80.0234, 104.804, 15.956, 15.1179)
 
