@@ -42,7 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://bvarfw4hinnny" path="res://Materials/menu.png" id="37_cg5kr"]
 [ext_resource type="Script" path="res://texture_button.gd" id="37_homki"]
 [ext_resource type="AudioStream" uid="uid://ofyvgg5y5fyu" path="res://BGM/落ち葉の上を歩く.mp3" id="37_no51k"]
-[ext_resource type="Script" path="res://healthBar.gd" id="39_0g4hq"]
+[ext_resource type="Script" path="res://HPBar.gd" id="39_luo43"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_aq225"]
 clip_count = 1
@@ -8147,7 +8147,7 @@ offset_top = 16.0
 offset_right = 132.0
 offset_bottom = 56.0
 
-[node name="ProgressBar" type="ProgressBar" parent="CharacterBody2D/Camera2D2"]
+[node name="HPBar" type="ProgressBar" parent="CharacterBody2D/Camera2D2"]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -8157,8 +8157,9 @@ offset_top = -27.0
 offset_right = 155.0
 grow_horizontal = 2
 grow_vertical = 0
-value = 100.0
-script = ExtResource("39_0g4hq")
+max_value = 30.0
+value = 30.0
+script = ExtResource("39_luo43")
 
 [node name="wood_sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(919, 1364)
