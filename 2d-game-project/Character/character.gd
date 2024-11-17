@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal healthChanged
+
 @export var direction = Vector2(0, 0)
 const SPEED = 100.0
 const DASH_SPEED = 200.0
@@ -7,6 +9,9 @@ var move_velocity = Vector2(0, 0)
 var moving = false
 var wood_counter = 0
 var fish_counter = 0
+
+@export var maxHealth = 30
+@onready var currentHealth: int = maxHealth
 
 #var is_start_fishing = false
 var fishing = false
