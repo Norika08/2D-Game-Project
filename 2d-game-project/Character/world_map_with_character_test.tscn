@@ -42,7 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://bvarfw4hinnny" path="res://Materials/menu.png" id="37_cg5kr"]
 [ext_resource type="Script" path="res://texture_button.gd" id="37_homki"]
 [ext_resource type="AudioStream" uid="uid://ofyvgg5y5fyu" path="res://BGM/落ち葉の上を歩く.mp3" id="37_no51k"]
-[ext_resource type="Script" path="res://HPBar.gd" id="39_luo43"]
+[ext_resource type="Script" path="res://health_bar.gd" id="39_lji7w"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_aq225"]
 clip_count = 1
@@ -8147,19 +8147,14 @@ offset_top = 16.0
 offset_right = 132.0
 offset_bottom = 56.0
 
-[node name="HPBar" type="ProgressBar" parent="CharacterBody2D/Camera2D2"]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 96.0
+[node name="HealthBar" type="TextureProgressBar" parent="CharacterBody2D/Camera2D2"]
+offset_left = 107.0
 offset_top = -27.0
-offset_right = 155.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_right = 156.0
+offset_bottom = -16.0
 max_value = 30.0
 value = 30.0
-script = ExtResource("39_luo43")
+script = ExtResource("39_lji7w")
 
 [node name="wood_sound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(919, 1364)
@@ -8175,5 +8170,25 @@ volume_db = 16.571
 
 [node name="walking" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("37_no51k")
+
+[node name="Fish" type="Area2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DeathPopup" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="UI/DeathPopup"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="RestartButton" type="Button" parent="UI/DeathPopup"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="child_entered_tree" from="TileMap/river" to="TileMap/river" method="_on_child_entered_tree"]
