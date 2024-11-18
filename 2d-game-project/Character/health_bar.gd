@@ -49,3 +49,7 @@ func on_player_death():
 	print("Player is dead!")
 	damage_timer_active = false
 	# 在此触发游戏死亡弹窗或其他逻辑
+
+
+func _on_character_body_2d_eatfish() -> void:
+	heal_hp(3)

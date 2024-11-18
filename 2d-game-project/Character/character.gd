@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal eatfish 
 @export var direction = Vector2(0, 0)
 const SPEED = 100.0
 const DASH_SPEED = 200.0
@@ -145,6 +146,8 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("start_fishing") and nearby.is_in_group("water"):
 		#is_fishing_start = true
+		eatfish.emit()
+		
 		if direction.is_equal_approx(Vector2(0, 1)):
 			$AnimatedSprite2D.play("Start_fishing_down")
 			#is_fishing = true

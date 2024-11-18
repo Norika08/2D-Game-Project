@@ -8234,3 +8234,4 @@ offset_right = 8.0
 offset_bottom = 8.0
 
 [connection signal="child_entered_tree" from="TileMap/river" to="TileMap/river" method="_on_child_entered_tree"]
+[connection signal="eatfish" from="CharacterBody2D" to="CharacterBody2D/Camera2D2/HealthBar" method="_on_character_body_2d_eatfish"]
