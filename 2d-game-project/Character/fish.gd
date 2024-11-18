@@ -1,21 +1,9 @@
 extends Area2D
 
-@onready var collect_sound =$collect
+# 恢复的血量
+var heal_amount = 5
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-	if body.name == "CharacterBody2D":
-		collect_sound.play()
-		body.fish_counter += 1
-		body.update_ui()
-		queue_free()
+func _on_body_entered(body):
+	if body.name == "Player":
+		body.eat_fish(heal_amount)  # 调用玩家的吃鱼逻辑
+		queue_free()  # 销毁鱼节点
