@@ -1,7 +1,7 @@
 extends Area2D
 
 # 恢复的血量
-var heal_amount = 5
+var heal_amount = 3
 
 func _on_body_entered(body):
 	if body.name == "Player":
