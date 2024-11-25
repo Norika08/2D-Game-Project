@@ -4,6 +4,6 @@ extends Area2D
 var heal_amount = 3
 
 func _on_body_entered(body):
-	if body.name == "Player":
+	if body.name == "CharacterBody2D":
 		body.eat_fish(heal_amount)  # 调用玩家的吃鱼逻辑
 		queue_free()  # 销毁鱼节点
